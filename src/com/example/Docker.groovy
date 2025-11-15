@@ -5,7 +5,7 @@ class Docker implements Serializable {
 
     def script
 
-    docker(script) {
+    Docker(script) {
         this.script = script
     }
 
