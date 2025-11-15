@@ -1,7 +1,7 @@
+
 #! /usr/bin/env groovy
-
-import com.example.Docker
-
-def call(String imageName) {
-    return new Docker (this).buildDockerImage(imageName)
+def call() {
+    echo "build the application for branch $GIT_BRANCH"
+    sh 'mvn package'
 }
+
